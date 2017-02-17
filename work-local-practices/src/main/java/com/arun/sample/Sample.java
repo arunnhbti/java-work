@@ -1,13 +1,14 @@
 package com.arun.sample;
 
 public class Sample {
+    TestA t = new TestA();
 
     /**
      * @param args
      */
-    public void test(String[] args) {
-        System.out.println("Test");
-
+    public void printName() {
+        String name = t.getName();
+        System.out.println(name);
     }
 
 }
