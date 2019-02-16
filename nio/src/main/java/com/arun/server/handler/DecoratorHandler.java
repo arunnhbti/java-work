@@ -2,6 +2,10 @@ package com.arun.server.handler;
 
 import java.io.IOException;
 
+/**
+ *
+ * @param <S>
+ */
 public abstract class DecoratorHandler<S> implements Handler<S>
 {
     Handler<S> other;
