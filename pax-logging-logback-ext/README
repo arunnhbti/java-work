@@ -1,0 +1,23 @@
+=====
+Update startup.properties under karaf.etc
+ mvn\:org.ops4j.pax.logging/pax-logging-api/1.10.1 = 8
+ mvn\:org.ops4j.pax.logging/pax-logging-logback/1.10.1 = 8
+ mvn\:org.ops4j.pax.logging/pax-logging-logback-ext/1.10.1 = 8
+make sure logback-api, logback implementation and your fragment at the same level.
+
+=====
+Make karaf to pick and use your configuration for logback by supplying the property:
+ org.ops4j.pax.logging.<your implementation>.config.file
+
+ e.g.
+ in case of logback, property will be:
+ org.ops4j.pax.logging.logback.config.file=${karaf.base}/etc/logback.xml
+=====
+Configure your layout to any existing Appender
+<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+    <layout class="org.apache.karaf.blog.logging.CustomLayout" />
+</encoder> 
+
+=====
+Enjoy
+Arun
