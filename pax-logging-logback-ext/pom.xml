@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.ops4j.pax.logging</groupId>
+    <artifactId>pax-logging-logback-ext</artifactId>
+    <packaging>bundle</packaging>
+    <version>1.10.1</version>
+
+    <parent>
+        <groupId>org.ops4j.pax</groupId>
+        <artifactId>logging</artifactId>
+        <version>1.10.1</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.ops4j.pax.logging</groupId>
+            <artifactId>pax-logging-logback</artifactId>
+            <version>1.10.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.3.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>org.apache.karaf.blog.logging</Export-Package>
+                        <Import-Package>!*</Import-Package>
+                        <Fragment-Host>org.ops4j.pax.logging.pax-logging-logback</Fragment-Host>
+                        <_failok>true</_failok>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

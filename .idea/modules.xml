@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Intellij/java-work/my-maven-plugin.iml" filepath="$USER_HOME$/Intellij/java-work/my-maven-plugin.iml" />
+      <module fileurl="file://$USER_HOME$/Intellij/java-work/nio.iml" filepath="$USER_HOME$/Intellij/java-work/nio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot/spring-boot.iml" filepath="$PROJECT_DIR$/spring-boot/spring-boot.iml" />
+      <module fileurl="file://$USER_HOME$/Intellij/java-work/test.iml" filepath="$USER_HOME$/Intellij/java-work/test.iml" />
+      <module fileurl="file://$USER_HOME$/Intellij/java-work/work-local-practices.iml" filepath="$USER_HOME$/Intellij/java-work/work-local-practices.iml" />
+    </modules>
+  </component>
+</project>

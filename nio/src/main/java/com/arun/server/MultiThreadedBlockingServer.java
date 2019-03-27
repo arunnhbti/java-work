@@ -16,8 +16,8 @@ public class MultiThreadedBlockingServer
     {
         try(ServerSocket server = new ServerSocket(8081))
         {
-            System.out.println("===============SERVER STARTED================");
-            System.out.println("=================PORT 8081 ==================");
+            System.out.println("| SERVER STARTED");
+            System.out.println("| PORT 8081");
             Handler<Socket> handler =
                     new ThreadPoolHandler(
                             new PrintingHandler(
@@ -32,7 +32,7 @@ public class MultiThreadedBlockingServer
             }
         } finally
         {
-            System.out.println("===============SERVER STOPPED================");
+            System.out.println("|| SERVER STOPPED");
         }
     }
 

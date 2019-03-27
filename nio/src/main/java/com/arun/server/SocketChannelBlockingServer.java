@@ -14,8 +14,8 @@ public class SocketChannelBlockingServer
     {
         try (ServerSocketChannel ssc = ServerSocketChannel.open())
         {
-            System.out.println("===============SERVER STARTED================");
-            System.out.println("=================PORT 8081 ==================");
+            System.out.println("| SERVER STARTED...");
+            System.out.println("| PORT 8081");
             Handler<SocketChannel> handler = new PrintingChannelHandler(new TransmogrifyChannelHandler());
 
             while (true)
@@ -25,7 +25,7 @@ public class SocketChannelBlockingServer
             }
         } finally
         {
-            System.out.println("===============SERVER STOPPED================");
+            System.out.println("| SERVER STOPPED");
         }
     }
 
