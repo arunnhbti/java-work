@@ -4,10 +4,14 @@ import java.util.Arrays;
 
 public class Q4_BalanceSum {
     public static void main(String[] args) {
+        //Use cases
+        //Use case - 1
         int[] numbers = new int[]{1, 2, 3, 6, 9, 7, 5, -33, 0};
         System.out.println(Arrays.toString(numbers) + " is balanced : " + balanceSum(numbers));
+        //Use case - 2
         numbers = new int[]{1, 2, 3, 6, 9, 7, 5};
         System.out.println(Arrays.toString(numbers) + " is balanced : " + balanceSum(numbers));
+` `        //Use case - 3
         numbers = new int[]{1, 2, 3, 6, 8, 7, 11};
         System.out.println(Arrays.toString(numbers) + " is balanced : " + balanceSum(numbers));
     }

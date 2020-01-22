@@ -24,7 +24,7 @@ public class Q3_Combination {
     /**
      * DFS searching of combinations.
      *
-     * @param startIndex
+     * @param startIndex          interim start index for denomination
      * @param sum                 interim sum of possible combinations
      * @param number              number for which we need to find unique combinations
      * @param denominations       set of fix denominations
