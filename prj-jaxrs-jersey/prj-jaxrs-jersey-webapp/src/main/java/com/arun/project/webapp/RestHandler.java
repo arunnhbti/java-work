@@ -5,7 +5,4 @@ import javax.ws.rs.core.Application;
 
 @ApplicationPath("restapi")
 public class RestHandler extends Application {
-
-
-
 }
