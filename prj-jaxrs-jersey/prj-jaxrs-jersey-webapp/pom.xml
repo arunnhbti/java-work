@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>prj-jaxrs-jersey</artifactId>
+        <groupId>com.arun.project</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>prj-jaxrs-jersey-webapp</artifactId>
+    <packaging>war</packaging>
+    <name>prj-jaxrs-jersey-webapp Webapp</name>
+
+    <properties>
+        <org.apache.tomcat.maven>2.2</org.apache.tomcat.maven>
+        <port>8080</port>
+        <contextPath>/prj-jaxrs-jersey-webapp</contextPath>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>prj-jaxrs-jersey-webapp</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>${org.apache.tomcat.maven}</version>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>deploy-only</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <username>admin</username>
+                    <password>admin</password>
+                    <port>${port}</port>
+                    <clientAuth>false</clientAuth>
+                    <tomcatUsers>src/test/resources/tomcat-users.xml</tomcatUsers>
+                    <path>${project.build.finalName}</path>
+                    <settings>
+                        <server>
+                            <id>TomcatServer</id>
+                            <username>admin</username>
+                            <password>admin</password>
+                        </server>
+                    </settings>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
