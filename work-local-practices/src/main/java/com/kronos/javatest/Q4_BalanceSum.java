@@ -2,6 +2,9 @@ package com.kronos.javatest;
 
 import java.util.Arrays;
 
+/**
+ * Balance: sum of left sub array equals to sum of right sub array.
+ */
 public class Q4_BalanceSum {
     public static void main(String[] args) {
         //Use cases
@@ -11,7 +14,7 @@ public class Q4_BalanceSum {
         //Use case - 2
         numbers = new int[]{1, 2, 3, 6, 9, 7, 5};
         System.out.println(Arrays.toString(numbers) + " is balanced : " + balanceSum(numbers));
-` `        //Use case - 3
+        //Use case - 3
         numbers = new int[]{1, 2, 3, 6, 8, 7, 11};
         System.out.println(Arrays.toString(numbers) + " is balanced : " + balanceSum(numbers));
     }

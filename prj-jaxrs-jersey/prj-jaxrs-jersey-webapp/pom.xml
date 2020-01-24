@@ -39,7 +39,7 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
+                <artifactId>tomcat6-maven-plugin</artifactId>
                 <version>${org.apache.tomcat.maven}</version>
                 <executions>
                     <execution>
@@ -47,6 +47,13 @@
                         <phase>pre-integration-test</phase>
                         <goals>
                             <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>deploy-tomcat</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>deploy</goal>
                         </goals>
                     </execution>
                     <execution>
@@ -58,10 +65,10 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <fork>true</fork>
                     <username>admin</username>
                     <password>admin</password>
                     <port>${port}</port>
-                    <clientAuth>false</clientAuth>
                     <fork>true</fork>
                     <tomcatUsers>src/test/resources/tomcat-users.xml</tomcatUsers>
                     <path>${project.build.finalName}</path>

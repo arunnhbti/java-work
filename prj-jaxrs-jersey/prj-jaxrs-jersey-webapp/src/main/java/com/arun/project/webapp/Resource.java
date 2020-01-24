@@ -2,9 +2,9 @@ package com.arun.project.webapp;
 
 import com.arun.project.webapp.entity.Entity;
 import com.arun.project.webapp.entity.EntityType;
-import com.arun.project.webapp.ext.EntityMessageBodyWriter;
-import com.arun.project.webapp.ext.EntityTypeConverter;
 import com.arun.project.webapp.media.MediaTypeExt;
+import com.arun.project.webapp.provider.EntityMessageBodyWriter;
+import com.arun.project.webapp.provider.EntityTypeConverter;
 
 import javax.ws.rs.*;
 
@@ -22,6 +22,7 @@ public class Resource {
      */
     @GET
     @Produces(MediaTypeExt.JSON)
+    @Path("/{entityType}")
     public Entity get(@PathParam("entityType") EntityType entityType, @QueryParam("id") String entityID) {
         Entity e = null;
         return e;

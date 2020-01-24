@@ -17,6 +17,7 @@
     <modules>
         <module>prj-jaxrs-jersey-client</module>
         <module>prj-jaxrs-jersey-webapp</module>
+        <module>prj-springboot-microservice</module>
     </modules>
     <dependencies>
         <dependency>
