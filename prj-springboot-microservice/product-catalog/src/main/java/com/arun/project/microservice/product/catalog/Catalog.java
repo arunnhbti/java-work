@@ -1,4 +1,4 @@
-package com.arun.project.microservice.prjmicroserviceb;
+package com.arun.project.microservice.product.catalog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

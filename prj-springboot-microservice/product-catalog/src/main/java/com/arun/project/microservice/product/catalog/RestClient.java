@@ -1,11 +1,8 @@
-package com.arun.project.microservice.prjmicroserviceb;
+package com.arun.project.microservice.product.catalog;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
 
 import java.util.Objects;
 

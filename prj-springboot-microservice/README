@@ -1,0 +1,10 @@
+# Standalone spring-boot web applications running in different servlet containers and listening to different port.
+# spring-boot thymeleaf
+# spring boot devtools: excluded by default from packaging and product ready packaging.
+# spring actuator: can monitor health, info on /actuator context path to same url on which applicaiton is running
+# CLI and properties based port configuration
+    run standalone program with java command specifying the customer property with double hyphen(--) in key-value form
+    e.g. --server-port=8188
+# Production ready application with out container: specify container starter pack scope as provided, maven will ensure excluding it while packaging.
+# Relaxed binding- environment property written in camelCase, PascalCase, kebab-case, snake_case, or in uppercase will bound.
+#

@@ -1,4 +1,4 @@
-package com.arun.project.microservice.prjmicroserviceb;
+package com.arun.project.microservice.product.catalog;
 
 public class ProductItem {
     private String id;
